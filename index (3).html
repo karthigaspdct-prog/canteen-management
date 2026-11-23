@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Masala &amp; Pickles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1 id="shopName">ABC Masala &amp; Pickles</h1>
+      <p>வீட்டு சுவை மசாலா, ஊறுகாய் &amp; மால்ட் | Homemade masala powders, pickles and malt</p>
+    </div>
+    <a href="#cartBox" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
+  </header>
+
+  <section class="banner">
+    <h2>Fresh ground masala. Traditional taste.</h2>
+    <p>Choose your items, add to cart and send your order on WhatsApp.</p>
+  </section>
+
+  <main>
+    <div class="shop">
+      <div>
+        <div class="filters">
+          <div id="cats" class="cats"></div>
+          <input id="search" type="search" placeholder="Search products...">
+        </div>
+        <div id="products" class="products"></div>
+        <p id="noItems" class="muted" hidden>No products found.</p>
+      </div>
+
+      <aside id="cartBox" class="cart">
+        <h3>Your Cart</h3>
+        <div id="cartList"></div>
+        <p class="total">Total: <span id="cartTotal">₹0</span></p>
+        <form id="orderForm">
+          <input id="cName" placeholder="Your name" required maxlength="40">
+          <input id="cPhone" placeholder="Mobile number (10 digits)" pattern="[0-9]{10}" title="10 digit mobile number" required inputmode="numeric">
+          <textarea id="cAddr" rows="3" placeholder="Delivery address" required maxlength="200"></textarea>
+          <button class="wa" type="submit" id="orderBtn" disabled>Order on WhatsApp</button>
+        </form>
+        <div class="row">
+          <button id="copyBtn" class="secondary" type="button">Copy order</button>
+          <button id="clearBtn" class="secondary" type="button">Clear cart</button>
+        </div>
+        <p id="msg" class="success"></p>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>Made with HTML, CSS &amp; JavaScript • Cart is saved in your browser</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
